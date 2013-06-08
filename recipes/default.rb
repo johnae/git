@@ -36,3 +36,7 @@ end
 file "/root/.gitconfig" do
   mode "0755"
 end
+
+directory "/root" do
+  mode "0755"
+end

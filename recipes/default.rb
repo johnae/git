@@ -31,3 +31,8 @@ execute "vagrant_git_name" do
   environment ({"HOME" => "/home/vagrant"})
   command "git config --global user.name \"#{name}\""
 end
+
+## workaround for bug in chef/git whatever
+file "/root/.gitconfig" do
+  mode "0755"
+end
